@@ -17,7 +17,28 @@
     </div>
     <img src="images/museum.jpg" alt="placeholder">
 
-  </header>
-</body>
+      <section>
+      <!-- Landscape Image -->
+      <picture>
+      <h2>Secure Image</h2>
+      <source srcset="images/museum-320px.jpg" media="(max-width: 959px)">
+      <source srcset="images/museum-640px.jpg" media="(max-width: 959px)">
+      <source srcset="images/museum-960px.jpg" media="(max-width: 959px)">
+      <img src="images/museum-959_x_1440.jpg" alt="Museum">
+      </picture>
+      </section>
 
+      <section>
+      <!-- Square Image -->
+      <picture>
+      <h2>Landscape Image</h2>
+      <source srcset="images/museum-480px.jpg" media="(min-width: 960px)">
+      <source srcset="images/museum-960px.jpg" media="(min-width: 960px)">
+      <source srcset="  images/museum-1440px.jpg" media="(min-width: 960px)">
+      <img src="images/museum-959_x_960.jpg" alt="museum">
+      </picture>
+      </section>
+  </header>
+  
+</body>
 </html>

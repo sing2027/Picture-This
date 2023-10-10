@@ -1,5 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picture This!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="title">
+      <h1>Picture This!</h1>
+      <h2>My Really Cool Blog Post</h2>
+    </div>
+    <img src="images/museum.jpg" alt="A museum scene">
+    <section>
+      <!-- Landscape Image -->
+      <h2>Landscape Image</h2>
+      <picture>
+        <source srcset="images/museum-320px.jpg" media="(max-width: 959px)">
+        <source srcset="images/museum-640px.jpg" media="(max-width: 959px)">
+        <source srcset="images/museum-960px.jpg" media="(max-width: 959px)">
+        <img src="images/museum-960px.jpg" alt="Museum">
+      </picture>
+    </section>
+    <section>
+      <!-- Square Image -->
+      <h2>Square Image</h2>
+      <picture>
+        <source srcset="images/museum-480px.jpg" media="(min-width: 960px)">
+        <source srcset="images/museum-960px.jpg" media="(min-width: 960px)">
+        <source srcset="images/museum-1440px.jpg" media="(min-width: 960px)">
+        <img src="images/museum-960px.jpg" alt="Museum">
+      </picture>
+    </section>
+  </header>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -17,9 +60,9 @@
     </div>
     <img src="images/museum.jpg" alt="placeholder">
 
-      <section>
+      <section> -->
       <!-- Landscape Image -->
-      <picture>
+      <!-- <picture>
       <h2>Secure Image</h2>
       <source srcset="images/museum-320px.jpg" media="(max-width: 959px)">
       <source srcset="images/museum-640px.jpg" media="(max-width: 959px)">
@@ -28,9 +71,9 @@
       </picture>
       </section>
 
-      <section>
+      <section> -->
       <!-- Square Image -->
-      <picture>
+      <!-- <picture>
       <h2>Landscape Image</h2>
       <source srcset="images/museum-480px.jpg" media="(min-width: 960px)">
       <source srcset="images/museum-960px.jpg" media="(min-width: 960px)">
@@ -41,4 +84,46 @@
   </header>
   
 </body>
-</html>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week5-image optimization</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Responsive images</h1>
+    <section>
+        <h2> Same image different sizes
+            <img srcset="https://placehold.co/600x400 600w,
+            https://placehold.co/1000x600 1000w, 
+            https://placehold.co/1200x800 1200w" sizes="(max-width: 600px),(max-width:100px),(max-width:1200px)"
+            img src="https://placehold.co/1000x600" alt="placeholder image">
+        </h2>
+    </section>
+    <section>
+        <h2>Same image different sizes</h2>
+        <img srcset="https://placehold.co/100x100 1x, 
+                    https://placehold.co/200x200 2x,
+                    https://placehold.co/300x300 3x" 
+        img src="https://placehold.co/200x200" alt="placeholder image" class="avatar">
+    </section>
+
+    <section>
+        <h2>Art direction</h2>
+        <picture>
+            <source srcset="images/fall-dog-1200.jpg" media="(main-width:900px)">
+            <source srcset="images/fall-dog-900.jpg" media="(main-width:640px)">
+            <source srcset="images/fall-dog-640.jpg" media="(main-width:320px)">
+            <img src="images/fall-dog-900.jpg" alt="dog sitting in its bed">
+        </picture>
+    </section>
+</div>
+</body>
+</html> -->

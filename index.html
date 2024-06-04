@@ -1,129 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="header">
-    <div class="title">
-      <h1>Picture This!</h1>
-      <h2>My Really Cool Blog Post</h2>
-    </div>
-    <img src="images/museum.jpg" alt="A museum scene">
-    <section>
-      <!-- Landscape Image -->
-      <h2>Landscape Image</h2>
-      <picture>
-        <source srcset="images/museum-320px.jpg" media="(max-width: 959px)">
-        <source srcset="images/museum-640px.jpg" media="(max-width: 959px)">
-        <source srcset="images/museum-960px.jpg" media="(max-width: 959px)">
-        <img src="images/museum-960px.jpg" alt="Museum">
-      </picture>
-    </section>
-    <section>
-      <!-- Square Image -->
-      <h2>Square Image</h2>
-      <picture>
-        <source srcset="images/museum-480px.jpg" media="(min-width: 960px)">
-        <source srcset="images/museum-960px.jpg" media="(min-width: 960px)">
-        <source srcset="images/museum-1440px.jpg" media="(min-width: 960px)">
-        <img src="images/museum-960px.jpg" alt="Museum">
-      </picture>
-    </section>
-  </header>
-</body>
-</html>
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header class="header">
-    <div class="title">
-      <h1>Picture This!</h1>
-      <h4>My Really Cool Blog Post</h4>
-    </div>
-    <img src="images/museum.jpg" alt="placeholder">
-
-      <section> -->
-      <!-- Landscape Image -->
-      <!-- <picture>
-      <h2>Secure Image</h2>
-      <source srcset="images/museum-320px.jpg" media="(max-width: 959px)">
-      <source srcset="images/museum-640px.jpg" media="(max-width: 959px)">
-      <source srcset="images/museum-960px.jpg" media="(max-width: 959px)">
-      <img src="images/museum-959_x_1440.jpg" alt="Museum">
-      </picture>
-      </section>
-
-      <section> -->
-      <!-- Square Image -->
-      <!-- <picture>
-      <h2>Landscape Image</h2>
-      <source srcset="images/museum-480px.jpg" media="(min-width: 960px)">
-      <source srcset="images/museum-960px.jpg" media="(min-width: 960px)">
-      <source srcset="  images/museum-1440px.jpg" media="(min-width: 960px)">
-      <img src="images/museum-959_x_960.jpg" alt="museum">
-      </picture>
-      </section>
-  </header>
-  
-</body>
-</html> -->
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>week5-image optimization</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>Responsive Images Example</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-    <h1>Responsive images</h1>
-    <section>
-        <h2> Same image different sizes
-            <img srcset="https://placehold.co/600x400 600w,
-            https://placehold.co/1000x600 1000w, 
-            https://placehold.co/1200x800 1200w" sizes="(max-width: 600px),(max-width:100px),(max-width:1200px)"
-            img src="https://placehold.co/1000x600" alt="placeholder image">
-        </h2>
-    </section>
-    <section>
-        <h2>Same image different sizes</h2>
-        <img srcset="https://placehold.co/100x100 1x, 
-                    https://placehold.co/200x200 2x,
-                    https://placehold.co/300x300 3x" 
-        img src="https://placehold.co/200x200" alt="placeholder image" class="avatar">
-    </section>
 
-    <section>
-        <h2>Art direction</h2>
-        <picture>
-            <source srcset="images/fall-dog-1200.jpg" media="(main-width:900px)">
-            <source srcset="images/fall-dog-900.jpg" media="(main-width:640px)">
-            <source srcset="images/fall-dog-640.jpg" media="(main-width:320px)">
-            <img src="images/fall-dog-900.jpg" alt="dog sitting in its bed">
-        </picture>
-    </section>
-</div>
+<h1>Responsive Images Example</h1>
+
+<picture>
+    <!-- Landscape images for larger viewports -->
+    <source srcset="images/lego_landscape_1920.png,
+                    images/lego_landscape_1440.png,
+                    images/lego_landscape_960.png"
+            media="(min-width: 960px)" />
+    
+    <!-- Square images for medium viewports -->
+    <source srcset="images/lego_square_1920.png,
+                    images/square/lego_square_1440.png,
+                    images/square/lego_square_1080.png,
+                    images/square/lego_square_960.png,
+                    images/square/lego_square_800.png,
+                    images/square/lego_square_720.png,
+                    images/square/lego_square_640.png,
+            media="(min-width: 640px)" />
+
+    <!-- Square images for smaller viewports -->
+    <source srcset="images/lego_square_720.png,
+                    images/lego_square_640.png,
+                    images/lego_square_540.png"
+            media="(min-width: 320px)" />
+
+    <!-- Square images for the smallest viewports -->
+    <source srcset="images/square/lego_square_480.png,
+                    images/square/lego_square_360.png,
+                    images/square/lego_square_320.png"
+            media="(max-width: 319px)" />
+
+    <!-- Fallback image -->
+    <img class="orig-img"
+         src="images/lego_square_320.png"
+         alt="Life-size person built from grey Lego bricks standing next to partially completed Lego people">
+</picture>
+
 </body>
-</html> -->
+</html>

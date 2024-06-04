@@ -1,95 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
-/* 
-html,
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  border: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-.header {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  background-color: cadetblue;
-}
-
-.title {
-  padding: 50px 25px;
+  padding: 20px;
   text-align: center;
 }
 
 h1 {
-  font-size: 3rem;
-  margin: 0;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-h4 {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-img {
-  display: block;
-}
-
-@media (min-width: 960px) {
-  .header {
-    grid-template-columns: repeat(2, 1fr);
-  }
-} */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0;
-}
-
-.header {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  background-color: cadetblue;
-}
-
-.title {
-  padding: 50px 25px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 3rem;
-  margin: 0;
-  color: #fff; 
-}
-
-h4 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #fff; 
-}
-
-img {
-  display: block;
-  max-width: 100%; 
-  height: auto; 
-}
-
-@media (min-width: 960px) {
- 
-  .header {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    width: 100%; 
-    max-height: none; 
-  }
+.orig-img {
+  width: 100%;
+  height: auto;
 }
